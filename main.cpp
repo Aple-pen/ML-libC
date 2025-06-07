@@ -1,6 +1,10 @@
 ﻿#include <iostream>
+#include <KNeighbors/Classifier.h>
 
 int main(){
-    std::cout << "Hello world" <<std::endl;
+
+    KNeighbors::Classifier classifier;
+    classifier.ReadCSV("perch_full.csv");
+    
     return 0;
 }
