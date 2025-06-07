@@ -1,6 +1,6 @@
 ﻿#include "ReadCsv.h"
 
-std::map<std::string, std::vector<double>> read_csv_columnwise(const std::string& filename) {
+DataTable read_csv_columnwise(const std::string& filename) {
     std::map<std::string, std::vector<double>> data;
     std::ifstream file(filename);
     std::string line;

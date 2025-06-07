@@ -8,4 +8,7 @@
 #include <string>
 #include <stdexcept>
 
-std::map<std::string, std::vector<double>> read_csv_columnwise(const std::string& filename);
+#include "type.h"
+
+
+DataTable read_csv_columnwise(const std::string& filename);

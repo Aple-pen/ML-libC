@@ -4,10 +4,12 @@
 #include <map>
 #include <string>
 
+#include "type.h"
+
 template<typename KNN>
 class IKNeighbors{
     protected : 
-        std::map<std::string, std::vector<double>> csvData;
+        DataTable csvData;
     public : 
 
         void fit() {static_cast<KNN *>(this)->fit();}

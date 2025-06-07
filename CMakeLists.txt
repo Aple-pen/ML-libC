@@ -13,12 +13,16 @@ set(KNeighbors  ${PROJECT_SOURCE_DIR}/models/KNeighbors)
 
 add_executable (ML-libC main.cpp 
                 ${KNeighbors}/Classifier.cpp  
-                ${PROJECT_SOURCE_DIR}/utils/ReadCsv.cpp)
+                ${PROJECT_SOURCE_DIR}/utils/ReadCsv.cpp                
+                )
 
 target_include_directories(ML-libC 
     PUBLIC 
+        ${PROJECT_SOURCE_DIR}/include
+        ${PROJECT_SOURCE_DIR}/include/Matrix        
         ${PROJECT_SOURCE_DIR}/models
     PRIVATE
         ${PROJECT_SOURCE_DIR}/interfaces
         ${PROJECT_SOURCE_DIR}/utils
+        
 )
